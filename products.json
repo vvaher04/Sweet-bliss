@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Classic Vanilla Dream",
+    "description": "Soft vanilla sponge layered with whipped cream and fresh berries.",
+    "price": 32.00,
+    "image": "https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=600&q=80",
+    "tag": "Bestseller"
+  },
+  {
+    "id": 2,
+    "name": "Dark Chocolate Indulgence",
+    "description": "Rich triple-layered chocolate fudge cake with ganache drizzle.",
+    "price": 38.00,
+    "image": "https://images.unsplash.com/photo-1606890737304-57a1ca8a5b62?w=600&q=80",
+    "tag": "Popular"
+  },
+  {
+    "id": 3,
+    "name": "Strawberry Blossom",
+    "description": "Fluffy chiffon cake adorned with fresh strawberries and cream.",
+    "price": 34.00,
+    "image": "https://images.unsplash.com/photo-1565958011703-44f9829ba187?w=600&q=80",
+    "tag": "Seasonal"
+  },
+  {
+    "id": 4,
+    "name": "Lemon Zest Delight",
+    "description": "Tangy lemon sponge with silky lemon curd and meringue topping.",
+    "price": 30.00,
+    "image": "https://images.unsplash.com/photo-1571115177098-24ec42ed204d?w=600&q=80",
+    "tag": ""
+  },
+  {
+    "id": 5,
+    "name": "Red Velvet Romance",
+    "description": "Classic Southern red velvet with cream cheese frosting.",
+    "price": 36.00,
+    "image": "https://images.unsplash.com/photo-1616541823729-00fe0aacd32c?w=600&q=80",
+    "tag": "Fan Favorite"
+  },
+  {
+    "id": 6,
+    "name": "Caramel Pecan Bliss",
+    "description": "Buttery caramel layers studded with toasted pecans and sea salt.",
+    "price": 40.00,
+    "image": "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3?w=600&q=80",
+    "tag": "Premium"
+  },
+  {
+    "id": 7,
+    "name": "Matcha Green Tea Cake",
+    "description": "Earthy Japanese matcha layers with white chocolate cream.",
+    "price": 42.00,
+    "image": "https://images.unsplash.com/photo-1625195341058-05a4a2a7a9e5?w=600&q=80",
+    "tag": "New"
+  },
+  {
+    "id": 8,
+    "name": "Blueberry Cheesecake",
+    "description": "Creamy New York-style cheesecake with fresh blueberry compote.",
+    "price": 35.00,
+    "image": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=600&q=80",
+    "tag": ""
+  }
+]

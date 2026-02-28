@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Crumble & Co. — Artisan Cakes</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🎂</span>
+        <span class="logo-text">Crumble <em>&</em> Co.</span>
+      </a>
+      <nav class="nav">
+        <a href="#cakes">Our Cakes</a>
+        <a href="#about">About</a>
+      </nav>
+      <button class="cart-btn" id="cartBtn" aria-label="Open cart">
+        <span class="cart-icon">🛒</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-eyebrow">Handcrafted with love</p>
+      <h1 class="hero-title">Every slice tells<br><em>a story.</em></h1>
+      <p class="hero-sub">Small-batch artisan cakes baked fresh daily, delivered right to your door.</p>
+      <a href="#cakes" class="btn-primary">Explore Cakes</a>
+    </div>
+    <div class="hero-img-wrap">
+      <img src="https://images.unsplash.com/photo-1621303837174-89787a7d4729?w=800&q=80" alt="Hero cake" class="hero-img"/>
+      <div class="hero-badge">Cash on Delivery</div>
+    </div>
+  </section>
+
+  <!-- PRODUCTS -->
+  <section class="products-section" id="cakes">
+    <div class="section-header">
+      <p class="section-eyebrow">Our Collection</p>
+      <h2 class="section-title">Choose your cake</h2>
+    </div>
+    <div class="products-grid" id="productsGrid">
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-inner">
+      <div class="about-text">
+        <p class="section-eyebrow">Our Story</p>
+        <h2>Baked with intention,<br><em>served with joy.</em></h2>
+        <p>We believe a great cake is more than dessert — it's a memory in the making. Every cake is baked to order using seasonal ingredients, traditional techniques, and an extra pinch of care.</p>
+        <p>No preservatives. No shortcuts. Just honest, beautiful cake.</p>
+      </div>
+      <div class="about-img-wrap">
+        <img src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=700&q=80" alt="Baker at work"/>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="logo-text small">Crumble <em>&</em> Co.</p>
+    <p>© 2025 · Handcrafted with ♥ · Cash on Delivery Only</p>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Your Cart</h3>
+      <button class="close-btn" id="closeCart">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <p class="cart-empty">Your cart is empty.<br>Add some cakes! 🎂</p>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-total">
+        <span>Total</span>
+        <span id="cartTotal">$0.00</span>
+      </div>
+      <button class="btn-primary full" id="checkoutBtn">Proceed to Order</button>
+    </div>
+  </aside>
+
+  <!-- ORDER MODAL -->
+  <div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="orderModal">
+      <button class="close-btn modal-close" id="closeModal">✕</button>
+      <div id="modalStep1">
+        <h2>Delivery Details</h2>
+        <p class="modal-sub">Fill in your details and we'll bring the cake to you!</p>
+        <form id="orderForm" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="fullName" placeholder="Jane Smith" required/>
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="phone" placeholder="+1 234 567 8900" required/>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Email Address *</label>
+            <input type="email" id="email" placeholder="jane@example.com" required/>
+          </div>
+          <div class="form-group">
+            <label>Delivery Address *</label>
+            <textarea id="address" placeholder="House no., Street, City, ZIP" rows="3" required></textarea>
+          </div>
+          <div class="form-group">
+            <label>Delivery Date *</label>
+            <input type="date" id="deliveryDate" required/>
+          </div>
+          <div class="form-group">
+            <label>Special Instructions</label>
+            <textarea id="notes" placeholder="Any allergies, customisation requests…" rows="2"></textarea>
+          </div>
+
+          <div class="payment-box">
+            <div class="payment-icon">💵</div>
+            <div>
+              <strong>Cash on Delivery</strong>
+              <p>Pay when your cake arrives at your door. No card needed.</p>
+            </div>
+          </div>
+
+          <div class="order-summary-mini">
+            <div id="orderSummaryItems"></div>
+            <div class="order-total-line">
+              <span>Total to pay on delivery</span>
+              <strong id="modalTotal"></strong>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-primary full" id="placeOrderBtn">Place Order 🎂</button>
+        </form>
+      </div>
+
+      <div id="modalStep2" style="display:none" class="success-screen">
+        <div class="success-icon">🎉</div>
+        <h2>Order Confirmed!</h2>
+        <p>Thank you, <strong id="successName"></strong>! Your cake is being prepared with love.</p>
+        <p>We'll deliver to you on <strong id="successDate"></strong>. Pay on delivery — easy!</p>
+        <p class="success-ref">Order Ref: <strong id="successRef"></strong></p>
+        <button class="btn-primary" id="continueShop">Continue Shopping</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
